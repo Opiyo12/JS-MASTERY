@@ -95,3 +95,36 @@ function number(num, callback){
   test(10, function(value){
     console.log(`The result is: ${value}`);
   })
+//DECISION MAKING WITH CALLBACK FUNCTION
+
+function operation(num, successCallback, errorCallback){
+    if(num>0){
+        const result=num*2;
+        successCallback(result);
+    }
+    else{
+        errorCallback("Error: Number must be greater than zero.")
+    }
+}
+operation(-2, function(value){
+    console.log(`Success: The result is ${value}`);
+}, function(error){
+    console.log(error);
+});
+//user login
+function login(user, pass, onSuccess, onError){
+if(user==="admin" && pass==="123"){
+ 
+onSuccess();
+}else{
+onError();
+}
+
+}
+login("admin", "1234", function(){
+console.log("Login Succesful...")
+
+}, function(){
+ console.log("Login Failed: Invalid username or password.");
+
+});
