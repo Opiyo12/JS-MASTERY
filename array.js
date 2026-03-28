@@ -31,9 +31,34 @@ const numbers=[1,2,3,4,5];
  for(const number of numbers){
     console.log(number);
  }
+ numbers[2]=10;
+ console.log(numbers);
+ //printing only even numbers
+ let evenSum=0;
+ for(let i=0; i<numbers.length; i++){
+   if(numbers[i]%2===0){
+      evenSum+=numbers[i];
+   }
+ }
+ console.log(evenSum);
+ //UNDERSTANDING LOOPS for of....and for in
+ //for off loop is used to iterate over the values of an array
+ const numbers1=[10,20,30,40];
+ for(const number of numbers1){
+      console.log(number);
+ }
+ //for in loop is used to iterate over the keys/index of an array
+ for (const index in numbers1){
+    console.log(index);
+ }
+ //we can also use for in loop to access the values of an array
+ for (const index in numbers1){
+    console.log(numbers1[index]);
+ }
  //3 ARRAYS METHODS
 // forEach() → run a function for each element
 // map() → transform each element
 // filter() → pick elements based on a condition
-// reduce() → combine elements into one value
+// reduce() → combine elements into one value\
+
 

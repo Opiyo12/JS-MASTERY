@@ -16,10 +16,10 @@ const greet=function(name){
     return `Hello ${name}`
     
 }
-//A function paramter can be anu variable, which is impacted in the return statement
+//A function paramter can be any datatypes, which is impacted in the return statement
 console.log(greet("Brian"))
- function name(name){
-    return `${name.age}, ${name.years}`;
+ function name(user){
+    return `${user.age}, ${user.years}`;
  }
  console.log(name({age:20, years:1999}));
 
